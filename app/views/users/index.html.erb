@@ -1,0 +1,14 @@
+<div class="text-center">
+  <h1>管理者情報一覧</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= paginate @users %>
+    <% @users.each do |user| %>
+      <div><%= link_to user.name, user %></div>
+    <% end %>
+    <%= paginate @users %>
+    <%= link_to '新規管理者登録', new_user_path, class: 'btn btn-info btn-block' %>
+  </div>
+</div>

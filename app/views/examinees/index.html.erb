@@ -1,0 +1,28 @@
+<div class="text-center">
+  <h1>テスト結果一覧</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= paginate @examinees %>
+    <table border="2px solid" style="width:100%;">
+      <tr>
+        <td>テスト日時</td>
+        <td>名前</td>
+        <td>合計テスト時間</td>
+        <td>合計ミス回数</td>
+        <td>正答率</td>
+      </tr>
+      <% @examinees.each do |examinee| %>
+        <tr>
+          <td><%= examinee.created_at %></td>
+          <td><%= link_to examinee.name, examinee %></td>
+          <td><%= examinee.time_total %>秒</td>
+          <td><%= examinee.miss_total %>回</td>
+          <td><%= examinee.ratio_total %>%</td>
+        </tr>
+      <% end %>
+    </table>
+    <%= paginate @examinees %>
+  </div>
+</div>

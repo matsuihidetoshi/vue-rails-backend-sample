@@ -10,6 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20190502160358) do
+
+  create_table "examinees", force: :cascade do |t|
+    t.string "name"
+    t.float "time_1"
+    t.float "time_2"
+    t.float "time_3"
+    t.float "time_4"
+    t.float "time_5"
+    t.float "time_total"
+    t.integer "miss_1"
+    t.integer "miss_2"
+    t.integer "miss_3"
+    t.integer "miss_4"
+    t.integer "miss_5"
+    t.integer "miss_total"
+    t.float "ratio_1"
+    t.float "ratio_2"
+    t.float "ratio_3"
+    t.float "ratio_4"
+    t.float "ratio_5"
+    t.float "ratio_total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

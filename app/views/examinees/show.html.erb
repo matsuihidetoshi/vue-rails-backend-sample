@@ -1,0 +1,90 @@
+<div class="text-center">
+  <h1>テスト結果詳細</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <table border="2px solid" style="width:100%;">
+      <tr>
+        <td>テスト日時</td>
+        <td><%= @examinee.created_at %></td>
+      </tr>
+      <tr>
+        <td>名前</td>
+        <td><%= @examinee.name %></td>
+      </tr>
+      <tr>
+        <td>1回目テスト時間</td>
+        <td><%= @examinee.time_1 %>秒</td>
+      </tr>
+      <tr>
+        <td>2回目テスト時間</td>
+        <td><%= @examinee.time_2 %>秒</td>
+      </tr>
+      <tr>
+        <td>3回目テスト時間</td>
+        <td><%= @examinee.time_3 %>秒</td>
+      </tr>
+      <tr>
+        <td>4回目テスト時間</td>
+        <td><%= @examinee.time_4 %>秒</td>
+      </tr>
+      <tr>
+        <td>5回目テスト時間</td>
+        <td><%= @examinee.time_5 %>秒</td>
+      </tr>
+      <tr>
+        <td>1回目ミス回数</td>
+        <td><%= @examinee.miss_1 %>回</td>
+      </tr>
+      <tr>
+        <td>2回目ミス回数</td>
+        <td><%= @examinee.miss_2 %>回</td>
+      </tr>
+      <tr>
+        <td>3回目ミス回数</td>
+        <td><%= @examinee.miss_3 %>回</td>
+      </tr>
+      <tr>
+        <td>4回目ミス回数</td>
+        <td><%= @examinee.miss_4 %>回</td>
+      </tr>
+      <tr>
+        <td>5回目ミス回数</td>
+        <td><%= @examinee.miss_5 %>回</td>
+      </tr>
+      <tr>
+        <td>1回目正答率</td>
+        <td><%= @examinee.ratio_1 %>回</td>
+      </tr>
+      <tr>
+        <td>2回目正答率</td>
+        <td><%= @examinee.ratio_2 %>回</td>
+      </tr>
+      <tr>
+        <td>3回目正答率</td>
+        <td><%= @examinee.ratio_3 %>回</td>
+      </tr>
+      <tr>
+        <td>4回目正答率</td>
+        <td><%= @examinee.ratio_4 %>回</td>
+      </tr>
+      <tr>
+        <td>5回目正答率</td>
+        <td><%= @examinee.ratio_5 %>回</td>
+      </tr>
+      <tr>
+        <td>合計ミス回数</td>
+        <td><%= @examinee.miss_total %>回</td>
+      </tr>
+      <tr>
+        <td>合計正答率</td>
+        <td><%= @examinee.ratio_total %>回</td>
+      </tr>
+      <tr>
+        <td>合計テスト時間</td>
+        <td><%= @examinee.time_total %>秒</td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  time_1: 1.5
+  time_2: 1.5
+  time_3: 1.5
+  time_4: 1.5
+  time_5: 1.5
+  time_total: 1.5
+  miss_1: 1
+  miss_2: 1
+  miss_3: 1
+  miss_4: 1
+  miss_5: 1
+  miss_total: 1
+  ratio_1: 1.5
+  ratio_2: 1.5
+  ratio_3: 1.5
+  ratio_4: 1.5
+  ratio_5: 1.5
+  ratio_total: 1.5
+
+two:
+  name: MyString
+  time_1: 1.5
+  time_2: 1.5
+  time_3: 1.5
+  time_4: 1.5
+  time_5: 1.5
+  time_total: 1.5
+  miss_1: 1
+  miss_2: 1
+  miss_3: 1
+  miss_4: 1
+  miss_5: 1
+  miss_total: 1
+  ratio_1: 1.5
+  ratio_2: 1.5
+  ratio_3: 1.5
+  ratio_4: 1.5
+  ratio_5: 1.5
+  ratio_total: 1.5
