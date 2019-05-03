@@ -15,7 +15,7 @@
       </tr>
       <% @examinees.each do |examinee| %>
         <tr>
-          <td><%= examinee.created_at %></td>
+          <td><%= examinee.created_at.strftime("%Y年 %m月 %d日 %H:%M") %></td>
           <td><%= link_to examinee.name, examinee %></td>
           <td><%= examinee.time_total %>秒</td>
           <td><%= examinee.miss_total %>回</td>
