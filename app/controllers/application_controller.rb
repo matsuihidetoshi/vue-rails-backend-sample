@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  #protect_from_forgery with: :exception
   include SessionsHelper
   
   private
@@ -24,4 +24,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def flush_old_record
+    if Examinee.all.length > 5000
+      Examinee.first.destroy
+    end
+  end
 end

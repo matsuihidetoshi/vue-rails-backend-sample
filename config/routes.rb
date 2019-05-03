@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  match '*path' => 'examinees#create', via: :options
   root to: 'statics#index'
 
   get 'login', to: 'sessions#new'

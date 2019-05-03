@@ -1,5 +1,6 @@
 class ExamineesController < ApplicationController
-  before_action :require_user_logged_in
+  before_action :require_user_logged_in, only: [:index, :show]
+  before_action :flush_old_record, only: [:create]
 
   def index
     @examinees = Examinee.all.page(params[:page])
@@ -23,10 +24,8 @@ class ExamineesController < ApplicationController
   private
 
   def examinee_params
-    params.require(:examinee)
-    .permit(
-      :name,
-      :time_1, :time_2, :time_3, :time_4, :time_5, :time_total,
+    params.require(:examinee).permit(
+      :name, :time_1, :time_2, :time_3, :time_4, :time_5, :time_total,
       :miss_1, :miss_2, :miss_3, :miss_4, :miss_5, :miss_total,
       :ratio_1, :ratio_2, :ratio_3, :ratio_4, :ratio_5, :ratio_total
     )
