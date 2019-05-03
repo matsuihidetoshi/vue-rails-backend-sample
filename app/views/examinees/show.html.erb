@@ -7,7 +7,7 @@
     <table border="2px solid" style="width:100%;">
       <tr>
         <td>テスト日時</td>
-        <td><%= @examinee.created_at %></td>
+        <td><%= @examinee.created_at.strftime("%Y年 %m月 %d日 %H:%M")  %></td>
       </tr>
       <tr>
         <td>名前</td>
@@ -55,23 +55,23 @@
       </tr>
       <tr>
         <td>1回目正答率</td>
-        <td><%= @examinee.ratio_1 %>回</td>
+        <td><%= @examinee.ratio_1 %>%</td>
       </tr>
       <tr>
         <td>2回目正答率</td>
-        <td><%= @examinee.ratio_2 %>回</td>
+        <td><%= @examinee.ratio_2 %>%</td>
       </tr>
       <tr>
         <td>3回目正答率</td>
-        <td><%= @examinee.ratio_3 %>回</td>
+        <td><%= @examinee.ratio_3 %>%</td>
       </tr>
       <tr>
         <td>4回目正答率</td>
-        <td><%= @examinee.ratio_4 %>回</td>
+        <td><%= @examinee.ratio_4 %>%</td>
       </tr>
       <tr>
         <td>5回目正答率</td>
-        <td><%= @examinee.ratio_5 %>回</td>
+        <td><%= @examinee.ratio_5 %>%</td>
       </tr>
       <tr>
         <td>合計テスト時間</td>
@@ -83,7 +83,7 @@
       </tr>
       <tr>
         <td>合計正答率</td>
-        <td><%= @examinee.ratio_total %>回</td>
+        <td><%= @examinee.ratio_total %>%</td>
       </tr>
     </table>
   </div>
